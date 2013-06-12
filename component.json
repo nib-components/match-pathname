@@ -3,6 +3,5 @@
   "version": "0.0.1",
   "scripts": [
     "index.js"
-  ],
-  "repo": "http://ntlvmbld01:4567/packages/nib-components/match-pathname"
+  ]
 }
