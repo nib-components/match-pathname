@@ -1,12 +1,8 @@
-var dom = require('dom');
+var each = [].forEach;
+var doc = document;
 
 module.exports = function(selector, className) {
-  Array.prototype.forEach.call(
-    document.body.querySelectorAll(selector),
-    function(selector){
-      if(selector.getAttribute('data-url') === window.location.pathname) {
-        dom(selector).toggleClass(className);
-      }
-    }
-  );
-};
+   each.call(doc.querySelectorAll(selector), function(el){
+      el.classList.toggle(className, el.getAttribute('data-url') === window.location.pathname);
+   });
+}
